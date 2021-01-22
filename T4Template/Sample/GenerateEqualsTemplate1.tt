@@ -1,0 +1,48 @@
+﻿<#@ template language="C#" debug="false" hostspecific="true" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Data.Entity" #>
+<#@ assembly name="EnvDTE" #>
+<#@ import namespace="EnvDTE" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Reflection" #>
+<#
+var dte = (this.Host as IServiceProvider).GetService(typeof(EnvDTE.DTE)) as EnvDTE.DTE;
+var templateItem = dte.Solution.FindProjectItem(this.Host.TemplateFile);
+var project = templateItem.ContainingProject;
+foreach (CodeElement element in project.CodeModel.CodeElements) {
+    if(!(element is CodeNamespace)) continue;
+
+    var codeNamespace = (CodeNamespace)element;
+    if(codeNamespace.FullName != "Sample") continue;
+#>
+namespace <#= codeNamespace.FullName #>
+{
+<#
+    foreach (CodeElement member in codeNamespace.Members)
+    {
+        if(!(member is CodeClass)) continue;
+
+        var codeClass = (CodeClass)member;
+#>
+    public partial class <#= codeClass.Name #>
+    {
+        public override bool Equals(object other)
+        {
+            if(other is <#= codeClass.Name #> <#= codeClass.Name.ToLower() #>)
+            {
+                return Id.Equals(<#= codeClass.Name.ToLower() #>.Id);
+            }
+
+            return false;
+        }
+    }
+<#
+    }
+}
+#>
+}
