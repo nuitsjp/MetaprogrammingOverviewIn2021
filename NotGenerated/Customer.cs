@@ -1,4 +1,4 @@
-﻿namespace Entities
+﻿namespace NotGenerated
 {
     public class Customer
     {

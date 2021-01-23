@@ -5,7 +5,7 @@
 
     <IsPackable>false</IsPackable>
 
-    <RootNamespace>CodeGenerationOverview.Test</RootNamespace>
+    <RootNamespace>NotGenerated.Test</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

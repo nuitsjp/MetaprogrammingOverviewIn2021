@@ -1,6 +1,6 @@
 using Xunit;
 
-namespace NotGenerated.Test
+namespace T4Template.Test
 {
     namespace GenerateEqualsTest
     {

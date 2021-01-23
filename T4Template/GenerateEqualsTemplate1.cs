@@ -1,4 +1,4 @@
-﻿namespace Entities
+﻿namespace T4Template
 {
     public partial class Employee
     {
