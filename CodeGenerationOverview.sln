@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectionWithCache", "Refl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectionWithCache.Test", "ReflectionWithCache.Test\ReflectionWithCache.Test.csproj", "{21AEE759-1101-402D-8465-8EFAB6BD812F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressionTree", "ExpressionTree\ExpressionTree.csproj", "{9F3DEC73-FFE1-4E6E-9233-E86A0E04AD80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressionTree.Test", "ExpressionTree.Test\ExpressionTree.Test.csproj", "{02D5912E-5F98-497E-84F0-61AFB244DB7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{21AEE759-1101-402D-8465-8EFAB6BD812F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21AEE759-1101-402D-8465-8EFAB6BD812F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21AEE759-1101-402D-8465-8EFAB6BD812F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F3DEC73-FFE1-4E6E-9233-E86A0E04AD80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F3DEC73-FFE1-4E6E-9233-E86A0E04AD80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F3DEC73-FFE1-4E6E-9233-E86A0E04AD80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F3DEC73-FFE1-4E6E-9233-E86A0E04AD80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02D5912E-5F98-497E-84F0-61AFB244DB7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02D5912E-5F98-497E-84F0-61AFB244DB7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02D5912E-5F98-497E-84F0-61AFB244DB7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02D5912E-5F98-497E-84F0-61AFB244DB7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
