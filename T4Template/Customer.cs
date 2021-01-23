@@ -1,6 +1,6 @@
 ﻿using Commons;
 
-namespace T4Template
+namespace Entities
 {
     public partial class Customer
     {

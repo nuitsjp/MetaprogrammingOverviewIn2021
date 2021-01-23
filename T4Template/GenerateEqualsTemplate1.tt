@@ -18,7 +18,7 @@ foreach (CodeElement element in project.CodeModel.CodeElements) {
     if(!(element is CodeNamespace)) continue;
 
     var codeNamespace = (CodeNamespace)element;
-    if(codeNamespace.FullName != "T4Template") continue;
+    if(codeNamespace.FullName != "Entities") continue;
 #>
 namespace <#= codeNamespace.FullName #>
 {

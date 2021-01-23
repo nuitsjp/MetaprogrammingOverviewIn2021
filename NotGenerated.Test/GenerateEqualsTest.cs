@@ -1,7 +1,8 @@
 using System;
+using Entities;
 using Xunit;
 
-namespace T4Template.Test
+namespace CodeGenerationOverview.Test
 {
     namespace GenerateEqualsTest
     {
