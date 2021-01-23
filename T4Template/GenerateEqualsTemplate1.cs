@@ -1,4 +1,4 @@
-﻿namespace Sample
+﻿namespace T4Template
 {
     public partial class Employee
     {

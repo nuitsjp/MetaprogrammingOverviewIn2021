@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Sample\Sample.csproj" />
+    <ProjectReference Include="..\T4Template\T4Template.csproj" />
   </ItemGroup>
 
 </Project>

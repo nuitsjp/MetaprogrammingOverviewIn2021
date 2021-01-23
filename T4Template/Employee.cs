@@ -1,11 +1,10 @@
-﻿using System;
-using Commons;
+﻿using Commons;
 
-namespace Sample
+namespace T4Template
 {
     public partial class Employee
     {
-        [EqualsMember]
+        [Identifier]
         public int Id { get; set; }
     }
 }

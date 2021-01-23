@@ -18,7 +18,7 @@ foreach (CodeElement element in project.CodeModel.CodeElements) {
     if(!(element is CodeNamespace)) continue;
 
     var codeNamespace = (CodeNamespace)element;
-    if(codeNamespace.FullName != "Sample") continue;
+    if(codeNamespace.FullName != "T4Template") continue;
 #>
 namespace <#= codeNamespace.FullName #>
 {
@@ -57,7 +57,7 @@ CodeProperty GetEqualsProperty(CodeClass codeClass)
             var codeProperty = (CodeProperty)member;
             foreach (CodeAttribute attribute in codeProperty.Attributes)
             {
-                if(attribute.Name.Contains("Equals"))
+                if(attribute.Name.Contains("Identifier"))
                 {
                     return codeProperty;
                 }
