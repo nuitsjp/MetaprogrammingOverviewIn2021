@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NotGenerated\NotGenerated.csproj" />
+    <ProjectReference Include="..\Reflection\Reflection.csproj" />
     <ProjectReference Include="..\T4Template\T4Template.csproj" />
   </ItemGroup>
 
