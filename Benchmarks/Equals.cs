@@ -1,49 +1,71 @@
 ﻿using BenchmarkDotNet.Attributes;
+using Equals.Fody;
+using Fody;
 
 namespace Benchmarks
 {
     public class Equals
     {
-        private readonly NotGenerated.Customer _notGeneratedCustomer1 = new NotGenerated.Customer { Code = 1 };
-        private readonly NotGenerated.Customer _notGeneratedCustomer2 = new NotGenerated.Customer { Code = 2 };
+        private static readonly NotGenerated.Customer NotGeneratedCustomer1 = new NotGenerated.Customer { Code = 1 };
+        private static readonly NotGenerated.Customer NotGeneratedCustomer2 = new NotGenerated.Customer { Code = 2 };
 
-        private readonly Reflection.Customer _reflectionCustomer1 = new Reflection.Customer {Code = 1};
-        private readonly Reflection.Customer _reflectionCustomer2 = new Reflection.Customer {Code = 2};
+        private static readonly Reflection.Customer ReflectionCustomer1 = new Reflection.Customer {Code = 1};
+        private static readonly Reflection.Customer ReflectionCustomer2 = new Reflection.Customer {Code = 2};
 
-        private readonly ReflectionWithCache.Customer _reflectionWithCacheCustomer1 = new ReflectionWithCache.Customer { Code = 1 };
-        private readonly ReflectionWithCache.Customer _reflectionWithCacheCustomer2 = new ReflectionWithCache.Customer { Code = 2 };
+        private static readonly ReflectionWithCache.Customer ReflectionWithCacheCustomer1 = new ReflectionWithCache.Customer { Code = 1 };
+        private static readonly ReflectionWithCache.Customer ReflectionWithCacheCustomer2 = new ReflectionWithCache.Customer { Code = 2 };
 
-        private readonly ExpressionTree.Customer _expressionTreeCustomer1 = new ExpressionTree.Customer { Code = 1 };
-        private readonly ExpressionTree.Customer _expressionTreeCustomer2 = new ExpressionTree.Customer { Code = 2 };
+        private static readonly ExpressionTree.Customer ExpressionTreeCustomer1 = new ExpressionTree.Customer { Code = 1 };
+        private static readonly ExpressionTree.Customer ExpressionTreeCustomer2 = new ExpressionTree.Customer { Code = 2 };
 
-        private readonly ExpressionTreeWithCache.Customer _expressionTreeWithCacheCustomer1 = new ExpressionTreeWithCache.Customer { Code = 1 };
-        private readonly ExpressionTreeWithCache.Customer _expressionTreeWithCacheCustomer2 = new ExpressionTreeWithCache.Customer { Code = 2 };
+        private static readonly ExpressionTreeWithCache.Customer ExpressionTreeWithCacheCustomer1 = new ExpressionTreeWithCache.Customer { Code = 1 };
+        private static readonly ExpressionTreeWithCache.Customer ExpressionTreeWithCacheCustomer2 = new ExpressionTreeWithCache.Customer { Code = 2 };
 
-        private readonly T4Template.Customer _t4TemplateCustomer1 = new T4Template.Customer {Code = 1};
-        private readonly T4Template.Customer _t4TemplateCustomer2 = new T4Template.Customer {Code = 2};
+        private static readonly T4Template.Customer T4TemplateCustomer1 = new T4Template.Customer {Code = 1};
+        private static readonly T4Template.Customer T4TemplateCustomer2 = new T4Template.Customer {Code = 2};
 
-        private readonly SourceGenerator.Customer _sourceGeneratorCustomer1 = new SourceGenerator.Customer { Code = 1 };
-        private readonly SourceGenerator.Customer _sourceGeneratorCustomer2 = new SourceGenerator.Customer { Code = 2 };
+        private static readonly SourceGenerator.Customer SourceGeneratorCustomer1 = new SourceGenerator.Customer { Code = 1 };
+        private static readonly SourceGenerator.Customer SourceGeneratorCustomer2 = new SourceGenerator.Customer { Code = 2 };
+
+        private static readonly object IlGeneratorCustomer1;
+        private static readonly object IlGeneratorCustomer2;
+
+        static Equals()
+        {
+            var weavingTask = new ModuleWeaver();
+            var testResult = weavingTask.ExecuteTestRun("ILGenerator.dll", false);
+
+            var customer1 = testResult.GetInstance("ILGenerator.Customer");
+            customer1.Code = 1;
+            IlGeneratorCustomer1 = customer1;
+            var customer2 = testResult.GetInstance("ILGenerator.Customer");
+            customer2.Code = 1;
+            IlGeneratorCustomer2 = customer2;
+        }
+
 
         [Benchmark]
-        public void NotGenerated() => _notGeneratedCustomer1.Equals(_notGeneratedCustomer2);
+        public void NotGenerated() => NotGeneratedCustomer1.Equals(NotGeneratedCustomer2);
 
         [Benchmark]
-        public void Reflection() => _reflectionCustomer1.Equals(_reflectionCustomer2);
+        public void Reflection() => ReflectionCustomer1.Equals(ReflectionCustomer2);
 
         [Benchmark]
-        public void ReflectionWithCache() => _reflectionWithCacheCustomer1.Equals(_reflectionWithCacheCustomer2);
+        public void ReflectionWithCache() => ReflectionWithCacheCustomer1.Equals(ReflectionWithCacheCustomer2);
 
         [Benchmark]
-        public void ExpressionTree() => _expressionTreeCustomer1.Equals(_expressionTreeCustomer2);
+        public void ExpressionTree() => ExpressionTreeCustomer1.Equals(ExpressionTreeCustomer2);
 
         [Benchmark]
-        public void ExpressionTreeWithCache() => _expressionTreeWithCacheCustomer1.Equals(_expressionTreeWithCacheCustomer2);
+        public void ExpressionTreeWithCache() => ExpressionTreeWithCacheCustomer1.Equals(ExpressionTreeWithCacheCustomer2);
 
         [Benchmark]
-        public void T4Template() => _t4TemplateCustomer1.Equals(_t4TemplateCustomer2);
+        public void T4Template() => T4TemplateCustomer1.Equals(T4TemplateCustomer2);
 
         [Benchmark]
-        public void SourceGenerator() => _sourceGeneratorCustomer1.Equals(_sourceGeneratorCustomer2);
+        public void SourceGenerator() => SourceGeneratorCustomer1.Equals(SourceGeneratorCustomer2);
+
+        [Benchmark]
+        public void StaticILGenerator() => IlGeneratorCustomer1.Equals(IlGeneratorCustomer2);
     }
 }
