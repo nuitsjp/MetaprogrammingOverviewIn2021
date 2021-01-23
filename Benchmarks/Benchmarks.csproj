@@ -15,6 +15,7 @@
     <ProjectReference Include="..\NotGenerated\NotGenerated.csproj" />
     <ProjectReference Include="..\ReflectionWithCache\ReflectionWithCache.csproj" />
     <ProjectReference Include="..\Reflection\Reflection.csproj" />
+    <ProjectReference Include="..\SourceGenerator\SourceGenerator.csproj" />
     <ProjectReference Include="..\T4Template\T4Template.csproj" />
   </ItemGroup>
 

@@ -22,6 +22,9 @@ namespace Benchmarks
         private readonly T4Template.Customer _t4TemplateCustomer1 = new T4Template.Customer {Code = 1};
         private readonly T4Template.Customer _t4TemplateCustomer2 = new T4Template.Customer {Code = 2};
 
+        private readonly SourceGenerator.Customer _sourceGeneratorCustomer1 = new SourceGenerator.Customer { Code = 1 };
+        private readonly SourceGenerator.Customer _sourceGeneratorCustomer2 = new SourceGenerator.Customer { Code = 2 };
+
         [Benchmark]
         public void NotGenerated() => _notGeneratedCustomer1.Equals(_notGeneratedCustomer2);
 
@@ -39,5 +42,8 @@ namespace Benchmarks
 
         [Benchmark]
         public void T4Template() => _t4TemplateCustomer1.Equals(_t4TemplateCustomer2);
+
+        [Benchmark]
+        public void SourceGenerator() => _sourceGeneratorCustomer1.Equals(_sourceGeneratorCustomer2);
     }
 }
