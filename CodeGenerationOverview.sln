@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflection", "Reflection\Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflection.Test", "Reflection.Test\Reflection.Test.csproj", "{10E821AB-4049-4F6A-83D8-438CCFE098EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectionWithCache", "ReflectionWithCache\ReflectionWithCache.csproj", "{93E7ABF7-E334-404D-8E74-3F6600CE8063}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectionWithCache.Test", "ReflectionWithCache.Test\ReflectionWithCache.Test.csproj", "{21AEE759-1101-402D-8465-8EFAB6BD812F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,14 @@ Global
 		{10E821AB-4049-4F6A-83D8-438CCFE098EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10E821AB-4049-4F6A-83D8-438CCFE098EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10E821AB-4049-4F6A-83D8-438CCFE098EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93E7ABF7-E334-404D-8E74-3F6600CE8063}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93E7ABF7-E334-404D-8E74-3F6600CE8063}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93E7ABF7-E334-404D-8E74-3F6600CE8063}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93E7ABF7-E334-404D-8E74-3F6600CE8063}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21AEE759-1101-402D-8465-8EFAB6BD812F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21AEE759-1101-402D-8465-8EFAB6BD812F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21AEE759-1101-402D-8465-8EFAB6BD812F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21AEE759-1101-402D-8465-8EFAB6BD812F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
