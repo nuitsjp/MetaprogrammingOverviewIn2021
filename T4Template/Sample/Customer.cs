@@ -1,7 +1,11 @@
-﻿namespace Sample
+﻿using System;
+using Commons;
+
+namespace Sample
 {
     public partial class Customer
     {
-        public int Id { get; set; }
+        [EqualsMember]
+        public int Code { get; set; }
     }
 }

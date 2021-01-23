@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Commons\Commons.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="GenerateEqualsTemplate1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>GenerateEqualsTemplate1.cs</LastGenOutput>

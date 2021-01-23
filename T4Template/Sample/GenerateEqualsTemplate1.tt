@@ -28,6 +28,7 @@ namespace <#= codeNamespace.FullName #>
         if(!(member is CodeClass)) continue;
 
         var codeClass = (CodeClass)member;
+        var codeProperty = GetEqualsProperty(codeClass);
 #>
     public partial class <#= codeClass.Name #>
     {
@@ -35,7 +36,7 @@ namespace <#= codeNamespace.FullName #>
         {
             if(other is <#= codeClass.Name #> <#= codeClass.Name.ToLower() #>)
             {
-                return Id.Equals(<#= codeClass.Name.ToLower() #>.Id);
+                return <#= codeProperty.Name #>.Equals(<#= codeClass.Name.ToLower() #>.<#= codeProperty.Name #>);
             }
 
             return false;
@@ -46,3 +47,23 @@ namespace <#= codeNamespace.FullName #>
 }
 #>
 }
+<#+
+CodeProperty GetEqualsProperty(CodeClass codeClass)
+{
+    foreach (var member in codeClass.Members)
+    {
+        if(member is CodeProperty)
+        {
+            var codeProperty = (CodeProperty)member;
+            foreach (CodeAttribute attribute in codeProperty.Attributes)
+            {
+                if(attribute.Name.Contains("Equals"))
+                {
+                    return codeProperty;
+                }
+            }
+        }
+    }
+    return null;
+}
+#>

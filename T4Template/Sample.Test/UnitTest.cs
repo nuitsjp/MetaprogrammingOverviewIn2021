@@ -8,8 +8,8 @@ namespace Sample.Test
         [Fact]
         public void Equals実行時にIdプロパティのEqualsが実行されること()
         {
-            var customer1 = new Customer {Id = 1};
-            var customer2 = new Customer {Id = 1};
+            var customer1 = new Customer {Code = 1};
+            var customer2 = new Customer {Code = 1};
             Assert.True(customer1.Equals(customer2));
         }
     }

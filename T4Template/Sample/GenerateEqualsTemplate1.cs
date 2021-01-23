@@ -18,7 +18,7 @@
         {
             if(other is Customer customer)
             {
-                return Id.Equals(customer.Id);
+                return Code.Equals(customer.Code);
             }
 
             return false;
