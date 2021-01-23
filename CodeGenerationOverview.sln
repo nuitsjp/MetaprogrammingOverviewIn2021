@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressionTree", "Expressio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressionTree.Test", "ExpressionTree.Test\ExpressionTree.Test.csproj", "{02D5912E-5F98-497E-84F0-61AFB244DB7F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressionTreeWithCache", "ExpressionTreeWithCache\ExpressionTreeWithCache.csproj", "{95CEB836-8917-4278-B725-B43C7E3C459F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressionTreeWithCache.Test", "ExpressionTreeWithCache.Test\ExpressionTreeWithCache.Test.csproj", "{8673D606-B50A-4708-83A6-E7D706457ACA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,14 @@ Global
 		{02D5912E-5F98-497E-84F0-61AFB244DB7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02D5912E-5F98-497E-84F0-61AFB244DB7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02D5912E-5F98-497E-84F0-61AFB244DB7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95CEB836-8917-4278-B725-B43C7E3C459F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95CEB836-8917-4278-B725-B43C7E3C459F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95CEB836-8917-4278-B725-B43C7E3C459F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95CEB836-8917-4278-B725-B43C7E3C459F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8673D606-B50A-4708-83A6-E7D706457ACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8673D606-B50A-4708-83A6-E7D706457ACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8673D606-B50A-4708-83A6-E7D706457ACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8673D606-B50A-4708-83A6-E7D706457ACA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

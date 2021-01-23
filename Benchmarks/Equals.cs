@@ -16,6 +16,9 @@ namespace Benchmarks
         private readonly ExpressionTree.Customer _expressionTreeCustomer1 = new ExpressionTree.Customer { Code = 1 };
         private readonly ExpressionTree.Customer _expressionTreeCustomer2 = new ExpressionTree.Customer { Code = 2 };
 
+        private readonly ExpressionTreeWithCache.Customer _expressionTreeWithCacheCustomer1 = new ExpressionTreeWithCache.Customer { Code = 1 };
+        private readonly ExpressionTreeWithCache.Customer _expressionTreeWithCacheCustomer2 = new ExpressionTreeWithCache.Customer { Code = 2 };
+
         private readonly T4Template.Customer _t4TemplateCustomer1 = new T4Template.Customer {Code = 1};
         private readonly T4Template.Customer _t4TemplateCustomer2 = new T4Template.Customer {Code = 2};
 
@@ -30,6 +33,9 @@ namespace Benchmarks
 
         [Benchmark]
         public void ExpressionTree() => _expressionTreeCustomer1.Equals(_expressionTreeCustomer2);
+
+        [Benchmark]
+        public void ExpressionTreeWithCache() => _expressionTreeWithCacheCustomer1.Equals(_expressionTreeWithCacheCustomer2);
 
         [Benchmark]
         public void T4Template() => _t4TemplateCustomer1.Equals(_t4TemplateCustomer2);

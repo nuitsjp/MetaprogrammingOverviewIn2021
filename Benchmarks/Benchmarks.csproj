@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ExpressionTreeWithCache\ExpressionTreeWithCache.csproj" />
     <ProjectReference Include="..\ExpressionTree\ExpressionTree.csproj" />
     <ProjectReference Include="..\NotGenerated\NotGenerated.csproj" />
     <ProjectReference Include="..\ReflectionWithCache\ReflectionWithCache.csproj" />
