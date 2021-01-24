@@ -34,22 +34,28 @@ namespace EqualsGenerator
                     var typeSymbol = context.Compilation.GetSemanticModel(targetType.SyntaxTree).GetDeclaredSymbol(targetType);
                     if (typeSymbol == null) throw new Exception("can not get typeSymbol.");
 
-                    var identifyProperty =
+                    var identifiers =
                         targetType.Members
-                            .Single(x => x
+                            .Where(x => x
                                 .AttributeLists
                                 .SelectMany(attribute => attribute.Attributes)
-                                .Any(attribute => attribute.Name.ToString() is "Identifier" or "IdentifierAttribute"));
-                    var identifySymbol = context.Compilation.GetSemanticModel(identifyProperty.SyntaxTree).GetDeclaredSymbol(identifyProperty);
-
-                    var equalsTemplate = new EqualsTemplate
+                                .Any(attribute => attribute.Name.ToString() is "Identifier" or "IdentifierAttribute"))
+                            .ToArray();
+                    // Identifierが複数していされた場合、エラーとするがエラーはSourceAnalyzerで処理するため
+                    // こちらではIdentifierが一つしか存在しなかった場合のみ処理する。
+                    if (identifiers.Length == 1)
                     {
-                        Namespace = typeSymbol.ContainingNamespace.ToDisplayString(),
-                        TypeName = typeSymbol.Name,
-                        PropertyName = identifySymbol?.Name
-                    };
+                        var identifySymbol = context.Compilation.GetSemanticModel(identifiers[0].SyntaxTree).GetDeclaredSymbol(identifiers[0]);
 
-                    context.AddSource($"{equalsTemplate.Namespace}.{equalsTemplate.TypeName}.Partial.cs", equalsTemplate.TransformText());
+                        var equalsTemplate = new EqualsTemplate
+                        {
+                            Namespace = typeSymbol.ContainingNamespace.ToDisplayString(),
+                            TypeName = typeSymbol.Name,
+                            PropertyName = identifySymbol?.Name
+                        };
+
+                        context.AddSource($"{equalsTemplate.Namespace}.{equalsTemplate.TypeName}.Partial.cs", equalsTemplate.TransformText());
+                    }
                 }
             }
             catch (Exception e)
