@@ -47,14 +47,14 @@ namespace Benchmarks
         [Benchmark]
         public void NotGenerated() => NotGeneratedCustomer1.Equals(NotGeneratedCustomer2);
 
-        [Benchmark]
-        public void Reflection() => ReflectionCustomer1.Equals(ReflectionCustomer2);
+        //[Benchmark]
+        //public void Reflection() => ReflectionCustomer1.Equals(ReflectionCustomer2);
 
         [Benchmark]
         public void ReflectionWithCache() => ReflectionWithCacheCustomer1.Equals(ReflectionWithCacheCustomer2);
 
-        [Benchmark]
-        public void ExpressionTree() => ExpressionTreeCustomer1.Equals(ExpressionTreeCustomer2);
+        //[Benchmark]
+        //public void ExpressionTree() => ExpressionTreeCustomer1.Equals(ExpressionTreeCustomer2);
 
         [Benchmark]
         public void ExpressionTreeWithCache() => ExpressionTreeWithCacheCustomer1.Equals(ExpressionTreeWithCacheCustomer2);

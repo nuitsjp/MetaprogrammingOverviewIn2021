@@ -18,12 +18,12 @@ namespace ExpressionTree
             var entity = Expression.Parameter(typeof(T));
             var getterCall = Expression.Call(entity, getIdentifyMethod);
 
-            var castToObject = Expression.Convert(getterCall, typeof(object));
+            var castToObject = Expression.Convert(getterCall, typeof(int));
             var lambda = Expression.Lambda(castToObject, entity);
 
-            var getIdentify = (Func<T, object>)lambda.Compile();
+            var getIdentify = (Func<T, int>)lambda.Compile();
 
-            return Equals(getIdentify((T)(object)this), getIdentify((T)obj));
+            return getIdentify((T) (object) this).Equals(getIdentify((T) obj));
         }
     }
 }

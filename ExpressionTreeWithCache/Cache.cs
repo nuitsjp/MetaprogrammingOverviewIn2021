@@ -5,6 +5,6 @@ namespace ExpressionTreeWithCache
 {
     public class Cache<T>
     {
-        public static Func<T, object> GetIdentify;
+        public static Func<T, int> GetIdentify;
     }
 }
