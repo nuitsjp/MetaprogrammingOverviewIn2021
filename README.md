@@ -10,13 +10,11 @@ Intel Core i7-7700T CPU 2.90GHz (Kaby Lake), 1 CPU, 8 logical and 4 physical cor
 
 
 ```
-|                  Method |           Mean |         Error |        StdDev |
-|------------------------ |---------------:|--------------:|--------------:|
-|            NotGenerated |       2.276 ns |     0.0199 ns |     0.0186 ns |
-|              Reflection |   2,935.931 ns |    23.8237 ns |    22.2847 ns |
-|     ReflectionWithCache |     222.600 ns |     2.5681 ns |     2.1445 ns |
-|          ExpressionTree | 103,915.357 ns | 1,536.3218 ns | 1,437.0764 ns |
-| ExpressionTreeWithCache |      28.355 ns |     0.2319 ns |     0.2170 ns |
-|              T4Template |       2.603 ns |     0.0200 ns |     0.0167 ns |
-|         SourceGenerator |       2.261 ns |     0.0253 ns |     0.0237 ns |
-|       StaticILGenerator |       2.770 ns |     0.0208 ns |     0.0185 ns |
+|                  Method |       Mean |     Error |    StdDev |
+|------------------------ |-----------:|----------:|----------:|
+|            NotGenerated |   2.357 ns | 0.0711 ns | 0.0630 ns |
+|     ReflectionWithCache | 224.730 ns | 2.1112 ns | 1.6483 ns |
+| ExpressionTreeWithCache |  18.491 ns | 0.3962 ns | 0.4239 ns |
+|              T4Template |   2.838 ns | 0.0808 ns | 0.0716 ns |
+|         SourceGenerator |   2.729 ns | 0.0785 ns | 0.0696 ns |
+|       StaticILGenerator |   2.832 ns | 0.0220 ns | 0.0205 ns |
