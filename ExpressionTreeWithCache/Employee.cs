@@ -1,10 +1,14 @@
 ﻿using Commons;
+using ExpressionTreeWithCache.Service;
 
-namespace ExpressionTreeWithCache
+namespace ExpressionTreeWithCache.Client
 {
-    public class Employee : EntityBase<Employee>
+    public class Employee
     {
         [Identifier]
         public int Id { get; set; }
+
+        public override bool Equals(object obj)
+            => this.InvokeEquals(obj);
     }
 }

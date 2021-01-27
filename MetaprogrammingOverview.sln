@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressionTree.Client", "Ex
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressionTree.Test", "ExpressionTree.Test\ExpressionTree.Test.csproj", "{02D5912E-5F98-497E-84F0-61AFB244DB7F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressionTreeWithCache", "ExpressionTreeWithCache\ExpressionTreeWithCache.csproj", "{95CEB836-8917-4278-B725-B43C7E3C459F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressionTreeWithCache.Client", "ExpressionTreeWithCache\ExpressionTreeWithCache.Client.csproj", "{95CEB836-8917-4278-B725-B43C7E3C459F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressionTreeWithCache.Test", "ExpressionTreeWithCache.Test\ExpressionTreeWithCache.Test.csproj", "{8673D606-B50A-4708-83A6-E7D706457ACA}"
 EndProject
@@ -39,7 +39,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ILGenerator.Test", "ILGener
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.ExpressionTree", "03.ExpressionTree", "{6651C0C9-DBCC-4D74-94B5-264985D65CFC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExpressionTreeWithCache", "ExpressionTreeWithCache", "{B6614F52-4555-494B-A418-55AF56504367}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04.ExpressionTreeWithCache", "04.ExpressionTreeWithCache", "{B6614F52-4555-494B-A418-55AF56504367}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ILGenerator", "ILGenerator", "{3500B0EC-AD1D-4768-A1E6-0FFB55BA6E9F}"
 EndProject
@@ -64,6 +64,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReflectionWithCache.Service", "ReflectionWithCache.Service\ReflectionWithCache.Service.csproj", "{C7442CCB-BF0D-4A19-9BC8-E818FB4CDA1A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressionTree.Service", "ExpressionTree.Server\ExpressionTree.Service.csproj", "{3BDECC0D-A666-407D-8AC2-FCFFB75A6C30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressionTreeWithCache.Service", "ExpressionTreeWithCache.Service\ExpressionTreeWithCache.Service.csproj", "{AFE9DC4A-8046-4090-8B1C-BAE71D47DBD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -163,6 +165,10 @@ Global
 		{3BDECC0D-A666-407D-8AC2-FCFFB75A6C30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BDECC0D-A666-407D-8AC2-FCFFB75A6C30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BDECC0D-A666-407D-8AC2-FCFFB75A6C30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFE9DC4A-8046-4090-8B1C-BAE71D47DBD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFE9DC4A-8046-4090-8B1C-BAE71D47DBD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFE9DC4A-8046-4090-8B1C-BAE71D47DBD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFE9DC4A-8046-4090-8B1C-BAE71D47DBD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -189,6 +195,7 @@ Global
 		{B1212E96-6444-4E23-AB94-23D14A34C2F6} = {A22212DA-A042-4BF9-8AC0-345220C7B8E4}
 		{C7442CCB-BF0D-4A19-9BC8-E818FB4CDA1A} = {F8CA9AC0-2EBA-45FC-9F96-AEB9E8AAF688}
 		{3BDECC0D-A666-407D-8AC2-FCFFB75A6C30} = {6651C0C9-DBCC-4D74-94B5-264985D65CFC}
+		{AFE9DC4A-8046-4090-8B1C-BAE71D47DBD4} = {B6614F52-4555-494B-A418-55AF56504367}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {72B50233-FDB1-4C30-A46B-792DBA871D74}

@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Equals.Fody\Equals.Fody.csproj" />
-    <ProjectReference Include="..\ExpressionTreeWithCache\ExpressionTreeWithCache.csproj" />
+    <ProjectReference Include="..\ExpressionTreeWithCache\ExpressionTreeWithCache.Client.csproj" />
     <ProjectReference Include="..\ExpressionTree\ExpressionTree.Client.csproj" />
     <ProjectReference Include="..\ILGenerator\ILGenerator.csproj" />
     <ProjectReference Include="..\NotMetaprogramming\NotMetaprogramming.csproj" />

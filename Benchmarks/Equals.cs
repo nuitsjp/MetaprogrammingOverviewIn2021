@@ -16,11 +16,11 @@ namespace Benchmarks
         private static readonly ReflectionWithCache.Customer ReflectionWithCacheCustomer1 = new ReflectionWithCache.Customer { Code = 1 };
         private static readonly ReflectionWithCache.Customer ReflectionWithCacheCustomer2 = new ReflectionWithCache.Customer { Code = 2 };
 
-        private static readonly ExpressionTree.Customer ExpressionTreeCustomer1 = new ExpressionTree.Customer { Code = 1 };
-        private static readonly ExpressionTree.Customer ExpressionTreeCustomer2 = new ExpressionTree.Customer { Code = 2 };
+        private static readonly ExpressionTree.Client.Customer ExpressionTreeCustomer1 = new ExpressionTree.Client.Customer { Code = 1 };
+        private static readonly ExpressionTree.Client.Customer ExpressionTreeCustomer2 = new ExpressionTree.Client.Customer { Code = 2 };
 
-        private static readonly ExpressionTreeWithCache.Customer ExpressionTreeWithCacheCustomer1 = new ExpressionTreeWithCache.Customer { Code = 1 };
-        private static readonly ExpressionTreeWithCache.Customer ExpressionTreeWithCacheCustomer2 = new ExpressionTreeWithCache.Customer { Code = 2 };
+        private static readonly ExpressionTreeWithCache.Client.Customer ExpressionTreeWithCacheCustomer1 = new ExpressionTreeWithCache.Client.Customer { Code = 1 };
+        private static readonly ExpressionTreeWithCache.Client.Customer ExpressionTreeWithCacheCustomer2 = new ExpressionTreeWithCache.Client.Customer { Code = 2 };
 
         private static readonly T4Template.Customer T4TemplateCustomer1 = new T4Template.Customer {Code = 1};
         private static readonly T4Template.Customer T4TemplateCustomer2 = new T4Template.Customer {Code = 2};
