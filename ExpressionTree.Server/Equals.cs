@@ -6,9 +6,9 @@ using Commons;
 
 namespace ExpressionTree.Service
 {
-    public static class ObjectExtensions
+    public static class Equals<T>
     {
-        public static bool InvokeEquals<T>(this T self, object other)
+        public static bool Invoke(T self, object other)
         {
             if (other is T t)
             {
@@ -19,9 +19,7 @@ namespace ExpressionTree.Service
 
                 var entity = Expression.Parameter(typeof(T));
                 var getterCall = Expression.Call(entity, getIdentifyMethod);
-
-                var castToObject = Expression.Convert(getterCall, typeof(int));
-                var lambda = Expression.Lambda(castToObject, entity);
+                var lambda = Expression.Lambda(getterCall, entity);
 
                 var getIdentify = (Func<T, int>)lambda.Compile();
 

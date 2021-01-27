@@ -17,7 +17,7 @@
     <ProjectReference Include="..\NotMetaprogramming\NotMetaprogramming.csproj" />
     <ProjectReference Include="..\ReflectionWithCache\ReflectionWithCache.csproj" />
     <ProjectReference Include="..\Reflection\Reflection.Client.csproj" />
-    <ProjectReference Include="..\SourceGenerator\SourceGenerator.csproj" />
+    <ProjectReference Include="..\SourceGenerator\SourceGenerator.Client.csproj" />
     <ProjectReference Include="..\T4Template\T4Template.csproj" />
   </ItemGroup>
 

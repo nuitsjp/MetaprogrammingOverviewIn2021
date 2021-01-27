@@ -9,6 +9,6 @@ namespace Reflection.Client
         public int Code { get; set; }
 
         public override bool Equals(object obj)
-            => this.InvokeEquals(obj);
+            => Equals<Customer>.Invoke(this, obj);
     }
 }

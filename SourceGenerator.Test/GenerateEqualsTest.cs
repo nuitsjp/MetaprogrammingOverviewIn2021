@@ -1,3 +1,4 @@
+using SourceGenerator.Client;
 using Xunit;
 
 namespace SourceGenerator.Test

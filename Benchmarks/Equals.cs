@@ -25,8 +25,8 @@ namespace Benchmarks
         private static readonly T4Template.Customer T4TemplateCustomer1 = new T4Template.Customer {Code = 1};
         private static readonly T4Template.Customer T4TemplateCustomer2 = new T4Template.Customer {Code = 2};
 
-        private static readonly SourceGenerator.Customer SourceGeneratorCustomer1 = new SourceGenerator.Customer { Code = 1 };
-        private static readonly SourceGenerator.Customer SourceGeneratorCustomer2 = new SourceGenerator.Customer { Code = 2 };
+        private static readonly SourceGenerator.Client.Customer SourceGeneratorCustomer1 = new SourceGenerator.Client.Customer { Code = 1 };
+        private static readonly SourceGenerator.Client.Customer SourceGeneratorCustomer2 = new SourceGenerator.Client.Customer { Code = 2 };
 
         private static readonly object IlGeneratorCustomer1;
         private static readonly object IlGeneratorCustomer2;

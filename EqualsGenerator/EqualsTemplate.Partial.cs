@@ -1,4 +1,4 @@
-﻿namespace EqualsGenerator
+﻿namespace EqualsGenerator.Service
 {
     public partial class EqualsTemplate
     {

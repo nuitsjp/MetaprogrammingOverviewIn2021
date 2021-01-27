@@ -10,9 +10,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="GenerateEqualsTemplate1.tt">
+    <None Update="ServiceTemplate1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>GenerateEqualsTemplate1.cs</LastGenOutput>
+      <LastGenOutput>ServiceTemplate1.cs</LastGenOutput>
     </None>
   </ItemGroup>
 
@@ -21,10 +21,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="GenerateEqualsTemplate1.cs">
+    <Compile Update="ServiceTemplate1.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>GenerateEqualsTemplate1.tt</DependentUpon>
+      <DependentUpon>ServiceTemplate1.tt</DependentUpon>
     </Compile>
   </ItemGroup>
 

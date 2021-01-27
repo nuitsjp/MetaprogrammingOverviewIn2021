@@ -3,7 +3,7 @@ using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 
-namespace EqualsGenerator
+namespace EqualsGenerator.Service
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     public class SourceAnalyzer : DiagnosticAnalyzer

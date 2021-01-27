@@ -5,9 +5,9 @@ using Commons;
 
 namespace Reflection.Service
 {
-    public static class ObjectExtensions
+    public static class Equals<T>
     {
-        public static bool InvokeEquals<T>(this T self, object other)
+        public static bool Invoke(T self, object other)
         {
             if (other is T t)
             {

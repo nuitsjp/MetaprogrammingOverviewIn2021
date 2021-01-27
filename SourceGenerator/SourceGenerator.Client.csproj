@@ -6,8 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Commons\Commons.csproj" />
-    <ProjectReference Include="..\EqualsGenerator\EqualsGenerator.csproj" 
-                      OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
+    <ProjectReference Include="..\EqualsGenerator\EqualsGenerator.Service.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
   </ItemGroup>
 
 </Project>

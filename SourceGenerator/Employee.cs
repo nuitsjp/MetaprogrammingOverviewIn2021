@@ -1,6 +1,6 @@
 ﻿using Commons;
 
-namespace SourceGenerator
+namespace SourceGenerator.Client
 {
     public partial class Employee
     {
