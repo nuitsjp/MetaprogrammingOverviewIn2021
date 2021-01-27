@@ -1,3 +1,4 @@
+using ExpressionTree.Client;
 using Xunit;
 
 namespace ExpressionTree.Test
