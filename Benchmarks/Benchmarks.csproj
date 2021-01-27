@@ -10,10 +10,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Equals.Fody\Equals.Fody.csproj" />
+    <ProjectReference Include="..\Equals.Fody\Fody.Server.csproj" />
     <ProjectReference Include="..\ExpressionTreeWithCache\ExpressionTreeWithCache.Client.csproj" />
     <ProjectReference Include="..\ExpressionTree\ExpressionTree.Client.csproj" />
-    <ProjectReference Include="..\ILGenerator\ILGenerator.csproj" />
+    <ProjectReference Include="..\ILGenerator\Fody.Client.csproj" />
     <ProjectReference Include="..\NotMetaprogramming\NotMetaprogramming.csproj" />
     <ProjectReference Include="..\ReflectionWithCache\ReflectionWithCache.csproj" />
     <ProjectReference Include="..\Reflection\Reflection.Client.csproj" />

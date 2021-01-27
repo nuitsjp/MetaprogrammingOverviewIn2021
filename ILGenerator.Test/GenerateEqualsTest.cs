@@ -1,5 +1,5 @@
-using Equals.Fody;
 using Fody;
+using Fody.Server;
 using Xunit;
 
 namespace ILGenerator.Test

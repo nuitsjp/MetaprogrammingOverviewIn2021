@@ -1,6 +1,6 @@
 ﻿using BenchmarkDotNet.Attributes;
-using Equals.Fody;
 using Fody;
+using Fody.Server;
 using NotMetaprogramming;
 
 namespace Benchmarks

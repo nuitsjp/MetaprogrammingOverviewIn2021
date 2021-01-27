@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using Fody;
 using Mono.Cecil;
 using Mono.Cecil.Cil;
 
-namespace Equals.Fody
+namespace Fody.Server
 {
     public class ModuleWeaver : BaseModuleWeaver
     {
@@ -38,7 +36,6 @@ namespace Equals.Fody
                 equals.Body.Variables.Add(new VariableDefinition(ModuleDefinition.TypeSystem.Boolean));
 
                 // Labels for goto.
-                var labelArgumentIsNotNull = Instruction.Create(OpCodes.Nop);
                 var labelReturnFalse = Instruction.Create(OpCodes.Nop);
 
                 var processor = equals.Body.GetILProcessor();

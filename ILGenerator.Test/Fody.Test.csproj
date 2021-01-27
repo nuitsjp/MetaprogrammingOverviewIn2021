@@ -22,8 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Equals.Fody\Equals.Fody.csproj" />
-    <ProjectReference Include="..\ILGenerator\ILGenerator.csproj" />
+    <ProjectReference Include="..\Equals.Fody\Fody.Server.csproj" />
+    <ProjectReference Include="..\ILGenerator\Fody.Client.csproj" />
   </ItemGroup>
 
 </Project>

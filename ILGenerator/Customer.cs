@@ -1,6 +1,6 @@
 ﻿using Commons;
 
-namespace ILGenerator
+namespace Fody.Client
 {
     public partial class Customer
     {
