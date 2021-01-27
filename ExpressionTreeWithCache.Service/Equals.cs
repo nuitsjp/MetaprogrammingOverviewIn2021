@@ -6,11 +6,13 @@ using Commons;
 
 namespace ExpressionTreeWithCache.Service
 {
-    public static class Equals<T>
+    public class Equals<T>
     {
-        private static readonly Func<T, int> GetIdentify;
+        public static Equals<T> Instance = new();
 
-        static Equals()
+        private readonly Func<T, int> _getIdentify;
+
+        private Equals()
         {
             var getIdentifyMethod = typeof(T)
                 .GetProperties()
@@ -23,14 +25,16 @@ namespace ExpressionTreeWithCache.Service
 
             var getIdentify = (Func<T, int>)lambda.Compile();
 
-            GetIdentify = getIdentify;
+            _getIdentify = getIdentify;
         }
 
-        public static bool Invoke(T self, object other)
+        public static bool Invoke(T self, object other) => Instance.InvokeInner(self, other);
+
+        private bool InvokeInner(T self, object other)
         {
             if (other is T t)
             {
-                return GetIdentify(self).Equals(GetIdentify(t));
+                return _getIdentify(self).Equals(_getIdentify(t));
             }
 
             return false;

@@ -6,21 +6,25 @@ namespace ReflectionWithCache.Service
 {
     public class Equals<T>
     {
-        private static PropertyInfo PropertyInfo;
+        public static Equals<T> Instance = new();
 
-        static Equals()
+        private readonly PropertyInfo _propertyInfo;
+
+
+        private Equals()
         {
-            PropertyInfo = typeof(T)
+            _propertyInfo = typeof(T)
                 .GetProperties()
                 .Single(x => x.GetCustomAttribute<IdentifierAttribute>() is not null);
-
         }
 
-        public static bool Invoke(T self, object other)
+        public static bool Invoke(T self, object other) => Instance.InvokeInner(self, other);
+
+        private bool InvokeInner(T self, object other)
         {
             if (other is T t)
             {
-                return Equals(PropertyInfo.GetValue(self), PropertyInfo.GetValue(t));
+                return Equals(_propertyInfo.GetValue(self), _propertyInfo.GetValue(t));
             }
 
             return false;

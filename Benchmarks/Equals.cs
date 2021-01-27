@@ -34,39 +34,39 @@ namespace Benchmarks
         static Equals()
         {
             var weavingTask = new ModuleWeaver();
-            var testResult = weavingTask.ExecuteTestRun("ILGenerator.dll", false);
+            var testResult = weavingTask.ExecuteTestRun("Fody.Client.dll", false);
 
-            var customer1 = testResult.GetInstance("ILGenerator.Customer");
+            var customer1 = testResult.GetInstance("Fody.Client.Customer");
             customer1.Code = 1;
             IlGeneratorCustomer1 = customer1;
-            var customer2 = testResult.GetInstance("ILGenerator.Customer");
+            var customer2 = testResult.GetInstance("Fody.Client.Customer");
             customer2.Code = 1;
             IlGeneratorCustomer2 = customer2;
         }
 
 
-        [Benchmark]
-        public void NotGenerated() => NotGeneratedCustomer1.Equals(NotGeneratedCustomer2);
+        //[Benchmark]
+        //public void NotGenerated() => NotGeneratedCustomer1.Equals(NotGeneratedCustomer2);
 
-        [Benchmark]
-        public void Reflection() => ReflectionCustomer1.Equals(ReflectionCustomer2);
+        //[Benchmark]
+        //public void Reflection() => ReflectionCustomer1.Equals(ReflectionCustomer2);
 
-        [Benchmark]
-        public void ReflectionWithCache() => ReflectionWithCacheCustomer1.Equals(ReflectionWithCacheCustomer2);
+        //[Benchmark]
+        //public void ReflectionWithCache() => ReflectionWithCacheCustomer1.Equals(ReflectionWithCacheCustomer2);
 
-        [Benchmark]
-        public void ExpressionTree() => ExpressionTreeCustomer1.Equals(ExpressionTreeCustomer2);
+        //[Benchmark]
+        //public void ExpressionTree() => ExpressionTreeCustomer1.Equals(ExpressionTreeCustomer2);
 
         [Benchmark]
         public void ExpressionTreeWithCache() => ExpressionTreeWithCacheCustomer1.Equals(ExpressionTreeWithCacheCustomer2);
 
-        [Benchmark]
-        public void T4Template() => T4TemplateCustomer1.Equals(T4TemplateCustomer2);
+        //[Benchmark]
+        //public void T4Template() => T4TemplateCustomer1.Equals(T4TemplateCustomer2);
 
-        [Benchmark]
-        public void SourceGenerator() => SourceGeneratorCustomer1.Equals(SourceGeneratorCustomer2);
+        //[Benchmark]
+        //public void SourceGenerator() => SourceGeneratorCustomer1.Equals(SourceGeneratorCustomer2);
 
-        [Benchmark]
-        public void StaticILGenerator() => IlGeneratorCustomer1.Equals(IlGeneratorCustomer2);
+        //[Benchmark]
+        //public void StaticILGenerator() => IlGeneratorCustomer1.Equals(IlGeneratorCustomer2);
     }
 }
