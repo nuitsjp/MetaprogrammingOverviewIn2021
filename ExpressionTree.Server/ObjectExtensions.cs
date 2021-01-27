@@ -25,7 +25,7 @@ namespace ExpressionTree.Service
 
                 var getIdentify = (Func<T, int>)lambda.Compile();
 
-                return getIdentify(self).Equals(getIdentify((T)other));
+                return getIdentify(self).Equals(getIdentify(t));
             }
 
             return false;
