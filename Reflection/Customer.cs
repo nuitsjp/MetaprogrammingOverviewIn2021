@@ -1,8 +1,7 @@
-﻿using System.Runtime.CompilerServices;
-using Commons;
+﻿using Commons;
 using Reflection.Service;
 
-namespace Reflection
+namespace Reflection.Client
 {
     public class Customer
     {

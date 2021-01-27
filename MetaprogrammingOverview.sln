@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T4Template.Test", "T4Templa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Benchmarks", "Benchmarks\Benchmarks.csproj", "{3CACC4DD-11EF-4BDD-8A65-2B01FD584726}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reflection", "Reflection\Reflection.csproj", "{4CDE1CB7-3291-4B73-B025-1B7A4A6ECE26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reflection.Client", "Reflection\Reflection.Client.csproj", "{4CDE1CB7-3291-4B73-B025-1B7A4A6ECE26}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reflection.Test", "Reflection.Test\Reflection.Test.csproj", "{10E821AB-4049-4F6A-83D8-438CCFE098EF}"
 EndProject
@@ -45,7 +45,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ILGenerator", "ILGenerator"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.NotMetaprogramming", "01.NotMetaprogramming", "{A22212DA-A042-4BF9-8AC0-345220C7B8E4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reflection", "Reflection", "{06F4D051-7AF6-40EC-9FB8-62EFBDECA71E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.Reflection", "01.Reflection", "{06F4D051-7AF6-40EC-9FB8-62EFBDECA71E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReflectionWithCache", "ReflectionWithCache", "{F8CA9AC0-2EBA-45FC-9F96-AEB9E8AAF688}"
 EndProject

@@ -10,8 +10,8 @@ namespace Benchmarks
         private static readonly Customer NotGeneratedCustomer1 = new Customer { Code = 1 };
         private static readonly Customer NotGeneratedCustomer2 = new Customer { Code = 2 };
 
-        private static readonly Reflection.Customer ReflectionCustomer1 = new Reflection.Customer {Code = 1};
-        private static readonly Reflection.Customer ReflectionCustomer2 = new Reflection.Customer {Code = 2};
+        private static readonly Reflection.Client.Customer ReflectionCustomer1 = new Reflection.Client.Customer {Code = 1};
+        private static readonly Reflection.Client.Customer ReflectionCustomer2 = new Reflection.Client.Customer {Code = 2};
 
         private static readonly ReflectionWithCache.Customer ReflectionWithCacheCustomer1 = new ReflectionWithCache.Customer { Code = 1 };
         private static readonly ReflectionWithCache.Customer ReflectionWithCacheCustomer2 = new ReflectionWithCache.Customer { Code = 2 };
