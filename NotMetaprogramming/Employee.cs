@@ -1,4 +1,4 @@
-﻿namespace NotGenerated
+﻿namespace NotMetaprogramming
 {
     public partial class Employee
     {

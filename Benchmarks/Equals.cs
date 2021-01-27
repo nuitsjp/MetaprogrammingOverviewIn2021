@@ -1,13 +1,14 @@
 ﻿using BenchmarkDotNet.Attributes;
 using Equals.Fody;
 using Fody;
+using NotMetaprogramming;
 
 namespace Benchmarks
 {
     public class Equals
     {
-        private static readonly NotGenerated.Customer NotGeneratedCustomer1 = new NotGenerated.Customer { Code = 1 };
-        private static readonly NotGenerated.Customer NotGeneratedCustomer2 = new NotGenerated.Customer { Code = 2 };
+        private static readonly Customer NotGeneratedCustomer1 = new Customer { Code = 1 };
+        private static readonly Customer NotGeneratedCustomer2 = new Customer { Code = 2 };
 
         private static readonly Reflection.Customer ReflectionCustomer1 = new Reflection.Customer {Code = 1};
         private static readonly Reflection.Customer ReflectionCustomer2 = new Reflection.Customer {Code = 2};

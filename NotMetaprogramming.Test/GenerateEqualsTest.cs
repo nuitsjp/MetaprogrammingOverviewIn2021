@@ -1,6 +1,6 @@
 using Xunit;
 
-namespace NotGenerated.Test
+namespace NotMetaprogramming.Test
 {
     public class EqualsがIdentifier属性で指定されたプロパティで行われること
     {
