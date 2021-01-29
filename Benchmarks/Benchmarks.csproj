@@ -7,13 +7,14 @@
 
   <ItemGroup>
     <PackageReference Include="BenchmarkDotNet" Version="0.12.1" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="3.8.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Equals.Fody\Fody.Metaprogramming.csproj" />
     <ProjectReference Include="..\ExpressionTreeWithCache\ExpressionTreeWithCache.csproj" />
     <ProjectReference Include="..\ExpressionTree\ExpressionTree.csproj" />
-    <ProjectReference Include="..\ILGenerator\Fody.csproj" />
+    <ProjectReference Include="..\Fody.Metaprogramming\Fody.Metaprogramming.csproj" />
+    <ProjectReference Include="..\Fody\Fody.csproj" />
     <ProjectReference Include="..\NotMetaprogramming\NotMetaprogramming.csproj" />
     <ProjectReference Include="..\ReflectionWithCache\ReflectionWithCache.csproj" />
     <ProjectReference Include="..\Reflection\Reflection.csproj" />

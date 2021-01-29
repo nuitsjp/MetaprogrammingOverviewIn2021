@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Commons\Commons.csproj" />
-    <ProjectReference Include="..\ReflectionWithCache.Service\ReflectionWithCache.Metaprogramming.csproj" />
+    <ProjectReference Include="..\ReflectionWithCache.Metaprogramming\ReflectionWithCache.Metaprogramming.csproj" />
   </ItemGroup>
 
 </Project>

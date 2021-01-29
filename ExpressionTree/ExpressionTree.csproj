@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Commons\Commons.csproj" />
-    <ProjectReference Include="..\ExpressionTree.Server\ExpressionTree.Metaprogramming.csproj" />
+    <ProjectReference Include="..\ExpressionTree.Metaprogramming\ExpressionTree.Metaprogramming.csproj" />
   </ItemGroup>
 
 </Project>
