@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
@@ -54,7 +55,8 @@ namespace SourceGenerator.Metaprogramming
                             PropertyName = identifySymbol?.Name
                         };
 
-                        context.AddSource($"{equalsTemplate.Namespace}.{equalsTemplate.TypeName}.Partial.cs", equalsTemplate.TransformText());
+                        context.AddSource($"{equalsTemplate.Namespace}.{equalsTemplate.TypeName}.Partial.cs", GenerateSource(equalsTemplate));
+//                        context.AddSource($"{equalsTemplate.Namespace}.{equalsTemplate.TypeName}.Partial.cs", equalsTemplate.TransformText());
                     }
                 }
             }
@@ -62,6 +64,42 @@ namespace SourceGenerator.Metaprogramming
             {
                 System.Diagnostics.Trace.WriteLine(e.ToString());
             }
+        }
+
+        private string GenerateSource(EqualsTemplate equalsTemplate)
+        {
+            var stringBuilder = new StringBuilder();
+            stringBuilder.Append(@"namespace ");
+            stringBuilder.Append(equalsTemplate.Namespace);
+            stringBuilder.Append(@"
+{
+    public partial class ");
+            stringBuilder.Append(equalsTemplate.TypeName);
+            stringBuilder.Append(@"
+    {
+        public override bool Equals(object other)
+        {
+            if(other is ");
+            stringBuilder.Append(equalsTemplate.TypeName);
+            stringBuilder.Append(" ");
+            stringBuilder.Append(equalsTemplate.TypeName.ToLower());
+            stringBuilder.Append(@")
+            {
+                return ");
+            stringBuilder.Append(equalsTemplate.PropertyName);
+            stringBuilder.Append(".Equals(");
+            stringBuilder.Append(equalsTemplate.TypeName.ToLower());
+            stringBuilder.Append(".");
+            stringBuilder.Append(equalsTemplate.PropertyName);
+            stringBuilder.Append(@");
+            }
+
+            return false;
+        }
+    }
+}
+");
+            return stringBuilder.ToString();
         }
 
         class SyntaxReceiver : ISyntaxReceiver

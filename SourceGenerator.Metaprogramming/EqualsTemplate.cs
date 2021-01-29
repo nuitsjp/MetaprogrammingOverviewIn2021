@@ -17,12 +17,9 @@ namespace SourceGenerator.Metaprogramming
     /// <summary>
     /// Class to produce the template output
     /// </summary>
-    
-    #line 1 "C:\Repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class EqualsTemplate : EqualsTemplateBase
     {
-#line hidden
         /// <summary>
         /// Create the template output
         /// </summary>
@@ -34,62 +31,24 @@ namespace SourceGenerator.Metaprogramming
             this.Write("\n");
             this.Write("\n");
             this.Write("\n\nnamespace ");
-            
-            #line 1 "C:\Repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Namespace));
-            
-            #line default
-            #line hidden
             this.Write("\n{\n    public partial class ");
-            
-            #line 1 "C:\Repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TypeName));
-            
-            #line default
-            #line hidden
             this.Write("\n    {\n        public override bool Equals(object other)\n        {\n            if" +
                     "(other is ");
-            
-            #line 1 "C:\Repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TypeName));
-            
-            #line default
-            #line hidden
             this.Write(" ");
-            
-            #line 1 "C:\Repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TypeName.ToLower()));
-            
-            #line default
-            #line hidden
             this.Write(")\n            {\n                return ");
-            
-            #line 1 "C:\Repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(PropertyName));
-            
-            #line default
-            #line hidden
             this.Write(".Equals(");
-            
-            #line 1 "C:\Repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TypeName.ToLower()));
-            
-            #line default
-            #line hidden
             this.Write(".");
-            
-            #line 1 "C:\Repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(PropertyName));
-            
-            #line default
-            #line hidden
             this.Write(");\n            }\n\n            return false;\n        }\n    }\n}\n");
             return this.GenerationEnvironment.ToString();
         }
     }
-    
-    #line default
-    #line hidden
     #region Base class
     /// <summary>
     /// Base class for this transformation
