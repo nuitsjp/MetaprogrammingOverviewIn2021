@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T4Template.Test", "T4Templa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Benchmarks", "Benchmarks\Benchmarks.csproj", "{3CACC4DD-11EF-4BDD-8A65-2B01FD584726}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reflection.Client", "Reflection\Reflection.Client.csproj", "{4CDE1CB7-3291-4B73-B025-1B7A4A6ECE26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reflection", "Reflection\Reflection.csproj", "{4CDE1CB7-3291-4B73-B025-1B7A4A6ECE26}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reflection.Test", "Reflection.Test\Reflection.Test.csproj", "{10E821AB-4049-4F6A-83D8-438CCFE098EF}"
 EndProject
@@ -19,21 +19,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReflectionWithCache", "Refl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReflectionWithCache.Test", "ReflectionWithCache.Test\ReflectionWithCache.Test.csproj", "{21AEE759-1101-402D-8465-8EFAB6BD812F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressionTree.Client", "ExpressionTree\ExpressionTree.Client.csproj", "{9F3DEC73-FFE1-4E6E-9233-E86A0E04AD80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressionTree", "ExpressionTree\ExpressionTree.csproj", "{9F3DEC73-FFE1-4E6E-9233-E86A0E04AD80}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressionTree.Test", "ExpressionTree.Test\ExpressionTree.Test.csproj", "{02D5912E-5F98-497E-84F0-61AFB244DB7F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressionTreeWithCache.Client", "ExpressionTreeWithCache\ExpressionTreeWithCache.Client.csproj", "{95CEB836-8917-4278-B725-B43C7E3C459F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressionTreeWithCache", "ExpressionTreeWithCache\ExpressionTreeWithCache.csproj", "{95CEB836-8917-4278-B725-B43C7E3C459F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressionTreeWithCache.Test", "ExpressionTreeWithCache.Test\ExpressionTreeWithCache.Test.csproj", "{8673D606-B50A-4708-83A6-E7D706457ACA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SourceGenerator.Client", "SourceGenerator\SourceGenerator.Client.csproj", "{A8A2194C-EB92-403A-9DCE-1EB28994307C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SourceGenerator", "SourceGenerator\SourceGenerator.csproj", "{A8A2194C-EB92-403A-9DCE-1EB28994307C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SourceGenerator.Test", "SourceGenerator.Test\SourceGenerator.Test.csproj", "{A3D5C6F1-DE33-4B4A-92D0-A1728488D485}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EqualsGenerator.Service", "EqualsGenerator\EqualsGenerator.Service.csproj", "{B9A2D11F-5DAB-4435-BF25-28BDEEC36B62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SourceGenerator.Metaprogramming", "EqualsGenerator\SourceGenerator.Metaprogramming.csproj", "{B9A2D11F-5DAB-4435-BF25-28BDEEC36B62}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fody.Client", "ILGenerator\Fody.Client.csproj", "{2D3C87D5-2A62-4693-B24B-A91F3B712577}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fody", "ILGenerator\Fody.csproj", "{2D3C87D5-2A62-4693-B24B-A91F3B712577}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fody.Test", "ILGenerator.Test\Fody.Test.csproj", "{F29B4E6B-D8C7-4925-8535-052A3BC260C9}"
 EndProject
@@ -53,19 +53,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06.SourceGenerator", "06.So
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05.T4Template", "05.T4Template", "{B78738ED-A442-4162-82A4-8659AD6AE5C5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fody.Server", "Equals.Fody\Fody.Server.csproj", "{426E5885-925A-4D6F-83B1-82B221B30D53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fody.Metaprogramming", "Equals.Fody\Fody.Metaprogramming.csproj", "{426E5885-925A-4D6F-83B1-82B221B30D53}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reflection.Service", "Reflection.Service\Reflection.Service.csproj", "{C5588BCF-06ED-454A-83B9-A822305E8EBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reflection.Metaprogramming", "Reflection.Service\Reflection.Metaprogramming.csproj", "{C5588BCF-06ED-454A-83B9-A822305E8EBB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotMetaprogramming", "NotMetaprogramming\NotMetaprogramming.csproj", "{D96F46D8-0AD8-4375-983E-D4FBAAC8CC7A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotMetaprogramming.Test", "NotMetaprogramming.Test\NotMetaprogramming.Test.csproj", "{B1212E96-6444-4E23-AB94-23D14A34C2F6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReflectionWithCache.Service", "ReflectionWithCache.Service\ReflectionWithCache.Service.csproj", "{C7442CCB-BF0D-4A19-9BC8-E818FB4CDA1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReflectionWithCache.Metaprogramming", "ReflectionWithCache.Service\ReflectionWithCache.Metaprogramming.csproj", "{C7442CCB-BF0D-4A19-9BC8-E818FB4CDA1A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressionTree.Service", "ExpressionTree.Server\ExpressionTree.Service.csproj", "{3BDECC0D-A666-407D-8AC2-FCFFB75A6C30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressionTree.Metaprogramming", "ExpressionTree.Server\ExpressionTree.Metaprogramming.csproj", "{3BDECC0D-A666-407D-8AC2-FCFFB75A6C30}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressionTreeWithCache.Service", "ExpressionTreeWithCache.Service\ExpressionTreeWithCache.Service.csproj", "{AFE9DC4A-8046-4090-8B1C-BAE71D47DBD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressionTreeWithCache.Metaprogramming", "ExpressionTreeWithCache.Service\ExpressionTreeWithCache.Metaprogramming.csproj", "{AFE9DC4A-8046-4090-8B1C-BAE71D47DBD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

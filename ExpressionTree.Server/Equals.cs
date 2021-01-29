@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 using System.Reflection;
 using Commons;
 
-namespace ExpressionTree.Service
+namespace ExpressionTree.Metaprogramming
 {
     public static class Equals<T>
     {

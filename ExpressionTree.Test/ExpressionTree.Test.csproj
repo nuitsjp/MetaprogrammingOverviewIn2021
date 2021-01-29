@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ExpressionTree\ExpressionTree.Client.csproj" />
+    <ProjectReference Include="..\ExpressionTree\ExpressionTree.csproj" />
   </ItemGroup>
 
 </Project>

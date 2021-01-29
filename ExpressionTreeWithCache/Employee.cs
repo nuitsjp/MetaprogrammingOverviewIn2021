@@ -1,7 +1,7 @@
 ﻿using Commons;
-using ExpressionTreeWithCache.Service;
+using ExpressionTreeWithCache.Metaprogramming;
 
-namespace ExpressionTreeWithCache.Client
+namespace ExpressionTreeWithCache
 {
     public class Employee
     {

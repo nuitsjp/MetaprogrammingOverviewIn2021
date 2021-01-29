@@ -1,7 +1,7 @@
 ﻿using Commons;
-using ExpressionTree.Service;
+using ExpressionTree.Metaprogramming;
 
-namespace ExpressionTree.Client
+namespace ExpressionTree
 {
     public class Customer
     {

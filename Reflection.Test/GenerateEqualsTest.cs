@@ -1,4 +1,3 @@
-using Reflection.Client;
 using Xunit;
 
 namespace Reflection.Test

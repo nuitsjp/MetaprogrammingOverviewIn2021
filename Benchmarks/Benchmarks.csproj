@@ -10,14 +10,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Equals.Fody\Fody.Server.csproj" />
-    <ProjectReference Include="..\ExpressionTreeWithCache\ExpressionTreeWithCache.Client.csproj" />
-    <ProjectReference Include="..\ExpressionTree\ExpressionTree.Client.csproj" />
-    <ProjectReference Include="..\ILGenerator\Fody.Client.csproj" />
+    <ProjectReference Include="..\Equals.Fody\Fody.Metaprogramming.csproj" />
+    <ProjectReference Include="..\ExpressionTreeWithCache\ExpressionTreeWithCache.csproj" />
+    <ProjectReference Include="..\ExpressionTree\ExpressionTree.csproj" />
+    <ProjectReference Include="..\ILGenerator\Fody.csproj" />
     <ProjectReference Include="..\NotMetaprogramming\NotMetaprogramming.csproj" />
     <ProjectReference Include="..\ReflectionWithCache\ReflectionWithCache.csproj" />
-    <ProjectReference Include="..\Reflection\Reflection.Client.csproj" />
-    <ProjectReference Include="..\SourceGenerator\SourceGenerator.Client.csproj" />
+    <ProjectReference Include="..\Reflection\Reflection.csproj" />
+    <ProjectReference Include="..\SourceGenerator\SourceGenerator.csproj" />
     <ProjectReference Include="..\T4Template\T4Template.csproj" />
   </ItemGroup>
 

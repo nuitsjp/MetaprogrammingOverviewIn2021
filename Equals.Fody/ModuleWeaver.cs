@@ -3,7 +3,7 @@ using System.Linq;
 using Mono.Cecil;
 using Mono.Cecil.Cil;
 
-namespace Fody.Server
+namespace Fody.Metaprogramming
 {
     public class ModuleWeaver : BaseModuleWeaver
     {

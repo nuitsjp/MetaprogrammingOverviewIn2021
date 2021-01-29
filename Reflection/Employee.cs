@@ -1,7 +1,7 @@
 ﻿using Commons;
-using Reflection.Service;
+using Reflection.Metaprogramming;
 
-namespace Reflection.Client
+namespace Reflection
 {
     public class Employee
     {

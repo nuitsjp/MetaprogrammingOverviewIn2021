@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Commons\Commons.csproj" />
-    <ProjectReference Include="..\ReflectionWithCache.Service\ReflectionWithCache.Service.csproj" />
+    <ProjectReference Include="..\ReflectionWithCache.Service\ReflectionWithCache.Metaprogramming.csproj" />
   </ItemGroup>
 
 </Project>

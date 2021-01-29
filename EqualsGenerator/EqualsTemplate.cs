@@ -7,7 +7,7 @@
 //     コードが再生成されると失われます。
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace EqualsGenerator.Service
+namespace SourceGenerator.Metaprogramming
 {
     using System.Linq;
     using System.Text;
@@ -18,7 +18,7 @@ namespace EqualsGenerator.Service
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Users\nuits.jp\source\repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
+    #line 1 "C:\Repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class EqualsTemplate : EqualsTemplateBase
     {
@@ -28,57 +28,62 @@ namespace EqualsGenerator.Service
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("\r\nnamespace ");
+            this.Write("\n");
+            this.Write("\n");
+            this.Write("\n");
+            this.Write("\n");
+            this.Write("\n");
+            this.Write("\n\nnamespace ");
             
-            #line 8 "C:\Users\nuits.jp\source\repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
+            #line 1 "C:\Repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Namespace));
             
             #line default
             #line hidden
-            this.Write("\r\n{\r\n    public partial class ");
+            this.Write("\n{\n    public partial class ");
             
-            #line 10 "C:\Users\nuits.jp\source\repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
+            #line 1 "C:\Repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TypeName));
             
             #line default
             #line hidden
-            this.Write("\r\n    {\r\n        public override bool Equals(object other)\r\n        {\r\n          " +
-                    "  if(other is ");
+            this.Write("\n    {\n        public override bool Equals(object other)\n        {\n            if" +
+                    "(other is ");
             
-            #line 14 "C:\Users\nuits.jp\source\repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
+            #line 1 "C:\Repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TypeName));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 14 "C:\Users\nuits.jp\source\repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
+            #line 1 "C:\Repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TypeName.ToLower()));
             
             #line default
             #line hidden
-            this.Write(")\r\n            {\r\n                return ");
+            this.Write(")\n            {\n                return ");
             
-            #line 16 "C:\Users\nuits.jp\source\repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
+            #line 1 "C:\Repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(PropertyName));
             
             #line default
             #line hidden
             this.Write(".Equals(");
             
-            #line 16 "C:\Users\nuits.jp\source\repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
+            #line 1 "C:\Repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TypeName.ToLower()));
             
             #line default
             #line hidden
             this.Write(".");
             
-            #line 16 "C:\Users\nuits.jp\source\repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
+            #line 1 "C:\Repos\MetaprogrammingOverviewIn2021\EqualsGenerator\EqualsTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(PropertyName));
             
             #line default
             #line hidden
-            this.Write(");\r\n            }\r\n\r\n            return false;\r\n        }\r\n    }\r\n}\r\n");
+            this.Write(");\n            }\n\n            return false;\n        }\n    }\n}\n");
             return this.GenerationEnvironment.ToString();
         }
     }

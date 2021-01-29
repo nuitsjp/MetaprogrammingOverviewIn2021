@@ -1,4 +1,4 @@
-﻿namespace EqualsGenerator.Service
+﻿namespace SourceGenerator.Metaprogramming
 {
     public partial class EqualsTemplate
     {

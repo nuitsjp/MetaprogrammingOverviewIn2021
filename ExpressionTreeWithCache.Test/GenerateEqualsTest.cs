@@ -1,4 +1,3 @@
-using ExpressionTreeWithCache.Client;
 using Xunit;
 
 namespace ExpressionTreeWithCache.Test

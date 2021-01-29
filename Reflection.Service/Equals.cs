@@ -1,9 +1,8 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Reflection;
 using Commons;
 
-namespace Reflection.Service
+namespace Reflection.Metaprogramming
 {
     public static class Equals<T>
     {

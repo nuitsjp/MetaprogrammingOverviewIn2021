@@ -2,7 +2,7 @@
 using System.Reflection;
 using Commons;
 
-namespace ReflectionWithCache.Service
+namespace ReflectionWithCache.Metaprogramming
 {
     public class Equals<T>
     {

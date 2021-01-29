@@ -1,7 +1,8 @@
 ﻿using BenchmarkDotNet.Attributes;
 using Fody;
-using Fody.Server;
+using Fody.Metaprogramming;
 using NotMetaprogramming;
+using Customer = ExpressionTree.Customer;
 
 namespace Benchmarks
 {
@@ -10,23 +11,23 @@ namespace Benchmarks
         private static readonly Customer NotGeneratedCustomer1 = new Customer { Code = 1 };
         private static readonly Customer NotGeneratedCustomer2 = new Customer { Code = 2 };
 
-        private static readonly Reflection.Client.Customer ReflectionCustomer1 = new Reflection.Client.Customer {Code = 1};
-        private static readonly Reflection.Client.Customer ReflectionCustomer2 = new Reflection.Client.Customer {Code = 2};
+        private static readonly Reflection.Customer ReflectionCustomer1 = new Reflection.Customer {Code = 1};
+        private static readonly Reflection.Customer ReflectionCustomer2 = new Reflection.Customer {Code = 2};
 
         private static readonly ReflectionWithCache.Customer ReflectionWithCacheCustomer1 = new ReflectionWithCache.Customer { Code = 1 };
         private static readonly ReflectionWithCache.Customer ReflectionWithCacheCustomer2 = new ReflectionWithCache.Customer { Code = 2 };
 
-        private static readonly ExpressionTree.Client.Customer ExpressionTreeCustomer1 = new ExpressionTree.Client.Customer { Code = 1 };
-        private static readonly ExpressionTree.Client.Customer ExpressionTreeCustomer2 = new ExpressionTree.Client.Customer { Code = 2 };
+        private static readonly Customer ExpressionTreeCustomer1 = new Customer { Code = 1 };
+        private static readonly Customer ExpressionTreeCustomer2 = new Customer { Code = 2 };
 
-        private static readonly ExpressionTreeWithCache.Client.Customer ExpressionTreeWithCacheCustomer1 = new ExpressionTreeWithCache.Client.Customer { Code = 1 };
-        private static readonly ExpressionTreeWithCache.Client.Customer ExpressionTreeWithCacheCustomer2 = new ExpressionTreeWithCache.Client.Customer { Code = 2 };
+        private static readonly ExpressionTreeWithCache.Customer ExpressionTreeWithCacheCustomer1 = new ExpressionTreeWithCache.Customer { Code = 1 };
+        private static readonly ExpressionTreeWithCache.Customer ExpressionTreeWithCacheCustomer2 = new ExpressionTreeWithCache.Customer { Code = 2 };
 
         private static readonly T4Template.Customer T4TemplateCustomer1 = new T4Template.Customer {Code = 1};
         private static readonly T4Template.Customer T4TemplateCustomer2 = new T4Template.Customer {Code = 2};
 
-        private static readonly SourceGenerator.Client.Customer SourceGeneratorCustomer1 = new SourceGenerator.Client.Customer { Code = 1 };
-        private static readonly SourceGenerator.Client.Customer SourceGeneratorCustomer2 = new SourceGenerator.Client.Customer { Code = 2 };
+        private static readonly SourceGenerator.Customer SourceGeneratorCustomer1 = new SourceGenerator.Customer { Code = 1 };
+        private static readonly SourceGenerator.Customer SourceGeneratorCustomer2 = new SourceGenerator.Customer { Code = 2 };
 
         private static readonly object IlGeneratorCustomer1;
         private static readonly object IlGeneratorCustomer2;
