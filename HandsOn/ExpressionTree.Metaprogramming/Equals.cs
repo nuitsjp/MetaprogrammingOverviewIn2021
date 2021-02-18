@@ -12,18 +12,11 @@ namespace ExpressionTree.Metaprogramming
         {
             if (other is T t)
             {
-                var getIdentifyMethod = typeof(T)
+                var identifyProperty = typeof(T)
                     .GetProperties()
-                    .Single(x => x.GetCustomAttribute<IdentifierAttribute>() is not null)
-                    .GetGetMethod();
+                    .Single(x => x.GetCustomAttribute<IdentifierAttribute>() is not null);
 
-                var entity = Expression.Parameter(typeof(T));
-                var getterCall = Expression.Call(entity, getIdentifyMethod);
-                var lambda = Expression.Lambda(getterCall, entity);
-
-                var getIdentify = (Func<T, int>)lambda.Compile();
-
-                return getIdentify(self).Equals(getIdentify(t));
+                return Equals(identifyProperty.GetValue(self), identifyProperty.GetValue(t));
             }
 
             return false;

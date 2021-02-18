@@ -69,6 +69,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fody.Test", "Fody.Test\Fody
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflection.ConsoleApp", "Reflection.ConsoleApp\Reflection.ConsoleApp.csproj", "{8764A219-F542-4EEB-84E7-8263114ECFC1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressionTree.ConsoleApp", "ExpressionTree.ConsoleApp\ExpressionTree.ConsoleApp.csproj", "{F9B40176-0BCC-4DC8-A6D6-43B90C358572}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -175,6 +177,10 @@ Global
 		{8764A219-F542-4EEB-84E7-8263114ECFC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8764A219-F542-4EEB-84E7-8263114ECFC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8764A219-F542-4EEB-84E7-8263114ECFC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9B40176-0BCC-4DC8-A6D6-43B90C358572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9B40176-0BCC-4DC8-A6D6-43B90C358572}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9B40176-0BCC-4DC8-A6D6-43B90C358572}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9B40176-0BCC-4DC8-A6D6-43B90C358572}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -203,6 +209,7 @@ Global
 		{9F246F68-BD18-4154-8515-D900FBC17B2E} = {3500B0EC-AD1D-4768-A1E6-0FFB55BA6E9F}
 		{B0583070-FAE8-4DA6-88C5-2BF3A6075FEF} = {3500B0EC-AD1D-4768-A1E6-0FFB55BA6E9F}
 		{8764A219-F542-4EEB-84E7-8263114ECFC1} = {06F4D051-7AF6-40EC-9FB8-62EFBDECA71E}
+		{F9B40176-0BCC-4DC8-A6D6-43B90C358572} = {6651C0C9-DBCC-4D74-94B5-264985D65CFC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {72B50233-FDB1-4C30-A46B-792DBA871D74}
