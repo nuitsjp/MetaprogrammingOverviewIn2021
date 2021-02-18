@@ -22,9 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Equals.Fody\Fody.Metaprogramming.csproj" />
     <ProjectReference Include="..\Fody.Metaprogramming\Fody.Metaprogramming.csproj" />
-    <ProjectReference Include="..\ILGenerator\Fody.csproj" />
+    <ProjectReference Include="..\Fody\Fody.csproj" />
   </ItemGroup>
 
 </Project>
